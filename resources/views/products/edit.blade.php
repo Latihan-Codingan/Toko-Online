@@ -9,5 +9,6 @@
     <br>
     Price : <input type="number" name="price" value="{{ $product->price }}">
     <br>
+    Image URL : <input type="file" name="image">
     <button type="submit">Save</button>
 </form>
