@@ -40,6 +40,7 @@ class ProductController extends Controller
             'name' => $request->name,
             'description' => $request->description,
             'price' => $request->price,
+            'image_url' => $request->image_url
         ]);
 
         return redirect()->route('products.index')->with('success','Product Has Been Changed');

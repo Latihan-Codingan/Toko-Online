@@ -8,6 +8,6 @@
     <br>
     Price : <input type="number" name="price">
     <br>
-    Image URL : <input type="file" name="image">
+    Image URL : <input type="text" name="image_url">
     <button type="submit">Save</button>
 </form>
