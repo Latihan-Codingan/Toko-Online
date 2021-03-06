@@ -16,7 +16,7 @@ class ProductApiController extends Controller
     public function store(Request $request)
     {
         $product = Product::create($request->all());
-        return response()->json(['message' => 'success','data' => $product]);
+        return response()->json(['message' => 'Data Has Been Inserted','data' => $product]);
     }
 
     public function show($id)
@@ -25,26 +25,16 @@ class ProductApiController extends Controller
         return response()->json(['message' => 'success','data' => $product]);
     }
 
-    public function edit($id)
-    {
-        //
-    }
-
     public function update(Request $request, Product $product)
     {
-        $product->update([
-            'name' => $request->name,
-            'description' => $request->description,
-            'price' => $request->price,
-            'image_url' => $request->image_url
-        ]);
+        $product->update($request->all());
 
-        return response()->json(['message' => 'success','data' => $product]);
+        return response()->json(['message' => 'Data Has Been Updated','data' => $product]);
     }
 
     public function destroy($id)
     {
         Product::destroy($id);
-        return response()->json(['message' => 'success']);
+        return response()->json(['message' => 'Data Has Been Deleted','data' => null]);
     }
 }

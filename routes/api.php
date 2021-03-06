@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('products', ProductApiController::class,['except' => ['create']]);
+Route::resource('products', ProductApiController::class,['except' => ['create','edit']]);
